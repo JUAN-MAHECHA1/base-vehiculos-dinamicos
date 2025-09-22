@@ -115,6 +115,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Función para crear productos en el carrito
+let total = 0;
+const totalSpan = document.getElementById("total");
+
 function createProductos(url, nombre, marca, precio) {
     // Imagen por defecto si no envían url
     const fotoFinal = url || "https://tse1.mm.bing.net/th/id/OIP.4JudGN8ibtldepPW253_7AHaFW?pid=Api&P=0&h=180";
@@ -164,7 +167,15 @@ function createProductos(url, nombre, marca, precio) {
     btnDelete.setAttribute('id', 'eliminar-carrito')
     btnDelete.textContent = "X";
 
+    const precioNum = parseFloat(precio);
+
+    total += precioNum;
+    totalSpan.textContent = total;
+
     btnDelete.addEventListener("click", () => {
+        total -= precioNum;
+        totalSpan.textContent = total;
+
         carritoPrincipal.remove();
     });
 
