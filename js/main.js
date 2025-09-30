@@ -93,7 +93,7 @@ form.addEventListener("submit", (e) => {
     const precioA = document.getElementById("precio-v").value.trim();
 
     if (!nombreA || !marcaA || !modeloA || !kilometrajeA || !precioA) {
-        alert("Complete todos los campos para el registro del vehículo por favor");
+        alert("me gsuta el pipi");
         return;
     }
     else {

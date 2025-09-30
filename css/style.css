@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
-
 h1,
 h2,
 h3,
@@ -132,7 +131,7 @@ h2 {
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.178);
 }
 
-#panel-carrito.active{
+#panel-carrito.active {
     right: 0;
     position: absolute;
 }
@@ -209,4 +208,18 @@ h2 {
     padding-left: 10px;
     /* opcional — ajusta para alinearlo con el contenido */
     box-sizing: border-box;
+}
+
+#panel-carrito a {
+    display: block;
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+#panel-carrito a:hover {
+    background: #0055aa;
 }
