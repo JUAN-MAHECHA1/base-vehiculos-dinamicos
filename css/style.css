@@ -219,7 +219,235 @@ h2 {
     border-radius: 10px;
     margin-top: 15px;
     transition: 0.3s;
+}@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Staatliches", sans-serif;
 }
+
+p,
+a,
+button,
+li,
+label,
+input,
+select,
+textarea,
+span {
+    font-family: "Sora", sans-serif;
+}
+
+*{
+    scrollbar-width: none;
+}
+
+body {
+    background: linear-gradient(to right, #00c6ff, #003576);
+}
+
+#carrito{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 20px;
+    border-radius: 15px;
+    border: 0 transparent;
+    background: #ffffff;
+    color: #0056b3;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: .4s;
+}
+
+#carrito:hover{
+    background-color: #ffffffcf;
+    transform: scale(1.1);
+}
+
+#carrito .bi-cart3{
+    font-size: 20px;
+}
+.bi::before, [class*=" bi-"]::before, [class^=bi-]::before{
+    font-weight: 500 !important;  
+}
+
+/* Sección principal */
+#form {
+    background: #ffffffcc; /* blanco semi-transparente */
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos */
+h2 {
+    font-weight: 500;
+    color: #003366;
+    text-align: center;
+}
+
+/* Inputs */
+.form-control {
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: #0072ff;
+    box-shadow: 0 0 8px rgba(0, 114, 255, 0.5);
+}
+
+/* Botón principal */
+#ag-v {
+    border-radius: 12px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+#ag-v:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Tarjetas de vehículos */
+#tarjeta .mb-3{
+    padding: 20px;
+    color: #ffffffcc;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#panel-carrito {
+    position: fixed;
+    width: 30%;
+    height: 90%;
+    background: #ffffff;
+    padding: 25px 10px;
+    border-radius: 15px;
+    top: 80px;
+    right: -500px;
+    align-items: center;
+    display: flex;
+    /* Flexbox */
+    flex-direction: column;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.178);
+}
+
+#panel-carrito.active{
+    right: 0;
+    position: absolute;
+}
+
+#panel-carrito h2.title-carrito {
+    border-bottom: 2px solid #003366;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#cont-productos {
+    flex: 1;
+    /* Ocupa todo el espacio disponible */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    /* Para que los productos se apilen uno debajo del otro */
+    align-items: center;
+    /* Centra horizontalmente las cards */
+}
+
+#panel-carrito .productos-card {
+    position: relative;
+    width: 100%;
+    max-width: 95%;
+    /* Evita que pegue a los bordes */
+    display: flex;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.178);
+    transition: .4s;
+}
+
+#panel-carrito .productos-card:hover {
+    transform: translateX(-10px);
+}
+
+/* Columna del botón (para alinearlo al fondo) */
+#panel-carrito .productos-card .boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* lo manda al fondo */
+    align-items: flex-end;
+    /* lo alinea a la derecha */
+}
+
+/* Botón de eliminar */
+#eliminar-carrito {
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: .4s;
+}
+
+#eliminar-carrito:hover {
+    transform: scale(1.1);
+}
+
+a {
+  display: inline-block;
+  margin-top: 18px;
+  text-decoration: none;
+  color: #fff;
+  background: #003366;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#total-carrito h2.total {
+    border-top: 2px solid #003366;
+    padding-top: 20px;
+    margin-top: auto;
+    /* ya lo tienes para empujar abajo */
+    align-self: stretch;
+    /* hace que el h2 ocupe todo el ancho del panel */
+    text-align: left;
+    /* ahora el texto queda al inicio (izquierda) */
+    padding-left: 10px;
+    /* opcional — ajusta para alinearlo con el contenido */
+    box-sizing: border-box;
+}
+
+
+
+
+
 #panel-carrito a:hover {
     background: #0055aa;
 }
